@@ -1,0 +1,14 @@
+
+Linux Kernel Parameters to be updated for NetBackup:
+
+1) echo "kernel.sem = 300  307200  32  1024">> /etc/sysctl.conf
+sysctl -p
+
+2) vi /etc/profile
+ulimit -S -c unlimited > /dev/null 2>&1 ulimit -aH
+ulimit -aH
+
+OR
+
+ulimit -f unlimited
+ulimit -f
